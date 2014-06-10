@@ -4,7 +4,7 @@ php:
   - 5.3
   - 5.4
   - 5.5
-  - hhvm
+  #- hhvm
 
 services:
   - memcached
@@ -22,9 +22,3 @@ before_script:
 
 script: phpunit
 
-notifications:
-    webhooks: http://sonata-project.org/bundles/cache/master/travis
-
-matrix:
-  allow_failures:
-    - php: hhvm
